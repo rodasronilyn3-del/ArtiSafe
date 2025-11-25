@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" type="image/x-icon" href="logoo (2).png">
+    <title>ArtiSafe - Protect Your Creativity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="logoo (2).png" alt="ArtSafe Logo" class="logo">
+                <img src="transparent.png" alt="ArtSafe Logo" class="logo">
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Monitor</a>
+                        <a href="#" class="dropdown-item">Extension</a>
+                        <a href="#" class="dropdown-item">Watermark</a>
+                        <a href="#" class="dropdown-item">Consult</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Art Categories</a>
+                        <a href="#" class="dropdown-item">Find an Artist</a>
+                        <a href="#" class="dropdown-item">Report</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Blogs</a>
+                        <a href="#" class="dropdown-item">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+            
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Protect your creativity.<br><span class="highlight">Secure your rights.</span></h1>
+                <p>ArtiSafe protects your creative work by securing your intellectual property rights and <br> ensuring that no one can reproduce, display, profit from your art without your explicit permission.</p>
+                <button class="cta-btn">Start Protecting Your Artwork</button>
+            </div>
+
+            <div class="hero-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-item active">
+                        <div class="artwork-card">
+                            <img src="The Scream.png" alt="The Scream and other artworks" class="artwork-image">
+                        </div>
+                    </div>
+                <div class="carousel-item">
+                        <div class="artwork-card">
+                            <img src="Earring.png" alt="painting" class="artwork-image">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="artwork-card">
+                            <img src="vangogh.png" alt="vangogh" class="artwork-image">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="artwork-card">
+                            <img src="Monalisa.png" alt="Modern Illustration" class="artwork-image">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="artwork-card">
+                             <img src="Monalisa.png" alt="Modern Illustration" class="artwork-image">   
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(0)"></span>
+                    <span class="indicator" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative shapes -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </section>
+
+    <script src="script.js"></script>
+
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Header Section */
+    .header-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .header-section h1 {
+      font-size: 36px;
+      color: #106eBE;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .quote-box {
+      background-color: #f0f4f8;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Cards Section 1 */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background-color: #e8f4f8;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 102, 204, 0.1);
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      background-color: #d4e9f4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+    }
+
+    .card h3 {
+      color: #0066cc;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* Solutions Section */
+    .solutions-header {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+
+    .solutions-header h2 {
+      font-size: 36px;
+      color: #106eBE;
+    }
+
+    .solutions-header h2 span {
+      color: #0FFCBE;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .solution-card {
+      background: linear-gradient(135deg, #0FFCBE 0%, #106eBE 100%);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 188, 212, 0.3);
+    }
+
+    .solution-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .solution-card h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .solution-card p {
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-section h1 {
+        font-size: 28px;
+      }
+
+      .solutions-header h2 {
+        font-size: 28px;
+      }
+
+      .cards-grid,
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header-section">
+      <h1>Is Your Next Masterpiece Already Someone Else's Profit?</h1>
+      
+      <div class="quote-box">
+        <h3>"A survey found that 58% of artists had experienced their artwork being stolen on Instagram. The ease of copying and reposting content online without credit or permission is rampant."</h3>
+      </div>
+    </div>
+
+    <!-- Problems Cards -->
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>Impact of AI Generators</h3>
+        <p>Generative AI poses a major threat to artists. A UK survey revealed 26% of artists have already lost work due to unauthorized AI training and content scraping.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <h3>NFT Market Issues</h3>
+        <p>The non-fungible token (NFT) market has also come under unauthorized instances of theft. Attention to call in NFTs without knowledge or permission is paramount.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Challenges Tracking</h3>
+        <p>Unlike physical theft tracked by INTERPOL, digital art crosses platforms instantly. This copyright infringement makes calculating a single, comprehensive 'stolen artwork' number impossible.</p>
+      </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <div class="solutions-header">
+      <h2><b>Our <span>Solutions</span></b></h2>
+    </div>
+
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <div class="solution-icon">📄</div>
+        <h3>File Identity Tagging</h3>
+        <p>Every artwork is tagged with an invisible digital signature (Hash, metadata, QR Code) to verify the original creator.</p>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon">🧠</div>
+        <h3>AI Identifier & Authenticity Checker</h3>
+        <p>Distinguishes human-made art from AI-generated work, protecting original artists.</p>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon">🕷️</div>
+        <h3>Web Crawler & Browser Extension</h3>
+        <p>Scans social media and websites for unauthorized use, instantly linking stolen work to our registry.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add intersection observer for card animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card, .solution-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
+</body>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0052CC;
+            --secondary-blue: #003D99;
+            --cyan: #1ECDB0;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .header-section h1 {
+            font-size: 32px;
+            color: var(--primary-blue);
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        /* Feature Circles Section */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .feature-circle {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .feature-circle h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .feature-circle.security {
+            background: #106eBE;
+            color: #0FFCBE;
+        }
+
+        .feature-circle.legal {
+            background: #0FFCBE;
+            color: #106eBE;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: var(--primary-blue);
+            text-align: left;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .reviewer-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .reviewer-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 8px;
+        }
+
+        .stars {
+            color: #FFA500;
+            font-size: 14px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            margin-bottom: 60px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .pricing-card {
+            background: #106eBE;
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .pricing-card .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .pricing-button {
+            background: #0FFCBE;
+            color: #106eBE;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(30, 205, 176, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .header-section h1 {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .feature-circle {
+                padding: 30px;
+                font-size: 14px;
+            }
+
+            .feature-circle h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+        <div class="header-section">
+            <h1>How ArtiSafe fights art thefts?</h1>
+        </div>
+        <section class="features">
+            <div class="feature-circle security">
+                <h2> <b> Security & Verification </b></h2>
+                <p>Every artwork receives a secure, tamper-proof certificate of authenticity. Our blockchain-based system ensures creator verification and prevents unauthorized distribution of digital art.</p>
+            </div>
+            <div class="feature-circle legal">
+                <h2> <b>Legal Consultation</b></h2>
+                <p>Get access to legal experts specializing in intellectual property and digital rights. We help artists understand their rights and take action against art theft with professional guidance.</p>
+            </div>
+        </section>
+
+   
+        <section class="reviews-section">
+            <h2 class="section-title"> <center> Excellent reviews by Clients </center>
+                <br>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="reviewer-image">👩‍🎨</div>
+                    <div class="reviewer-name">JDC1001</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"This is exactly what I needed on discovering my artwork was being stolen. ArtSafe made it easy to document and protect my work. Highly recommended for all digital artists."</div>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-image">👨‍🎨</div>
+                    <div class="reviewer-name">KMC</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"A powerful resource for creative protection. The combination of technology and legal support gives me confidence that my intellectual property is truly protected."</div>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-image">🎨</div>
+                    <div class="reviewer-name">ArtLover92</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"As a professional illustrator, ArtSafe has become essential to my workflow. The verification system is seamless and the legal support team is incredibly responsive."</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing-section">
+            <h2 class="section-title"> <center> Pricing for Services </center> </h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <p class="subtitle">1 Month Free<br>Then plan includes:</p>
+                    <ul class="pricing-features">
+                        <li>Up to 5 artworks with protection</li>
+                        <li>Build your portfolio</li>
+                        <li>Takedown artwork theft</li>
+                    </ul>
+                    <button class="pricing-button">Get Started for Free</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>ArtSafe Plus</h3>
+                    <p class="subtitle">Monthly, billed annually<br>Includes everything plus:</p>
+                    <ul class="pricing-features">
+                        <li>All of the artworks protected and unlimited</li>
+                        <li>Priority legal support</li>
+                    </ul>
+                    <button class="pricing-button">Get Started for Free</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-circle, .review-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Button interactivity
+        document.querySelectorAll('.pricing-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Redirecting to sign up...');
+            });
+        });
+    </script>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Art Gallery background and overlay */
+        .vision-banner {
+            background-image: url('unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh; /* Responsive height */
+            position: relative;
+        }
+        
+    
+        .footer-bg {
+            background-color: #101935;
+        }
+
+       
+        .accent-color {
+            color: #0FFCBE;
+        }
+        
+        
+        .solution-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+    <br>
+    <br>
+</head>
+<body class="font-sans antialiased">
+
+    
+    <section id="vision" class="vision-banner flex items-center justify-center">
+        
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 text-center max-w-4xl px-6">
+            <!-- Title -->
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-wide accent-color">
+                Our Vision
+            </h1>
+            <!-- Description -->
+            <p class="text-white text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                To be the global standard for digital art ownership and protection, creating a future where every artist and creator has uncompromised control and undeniable rights over their intellectual property in the connected world.
+            </p>
+            
+            <!-- Photo Credit -->
+            <div class="absolute bottom-4 right-4 text-xs text-white opacity-75">
+                <br>
+                <br>
+                <br>
+                Photo by Andrew T on Unsplash
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <!-- 2. FOOTER SECTION -->
+    <footer class="footer-bg text-white pt-16 pb-6">
+        <div class="container mx-auto px-6">
+            
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-700/50 pb-12">
+                
+                <!-- Brand & Description Column -->
+                <div class="col-span-1 md:col-span-1">
+                    <h2 class="text-3xl font-extrabold mb-4">
+                        <span class="text-white">Arti</span><span class="accent-color">Safe</span>
+                    </h2>
+                    <p class="text-sm font-semibold mb-4">
+                        Protect Your Creativity. Secure Your Rights.
+                    </p>
+                    <p class="text-xs leading-5 text-gray-400">
+                        ArtSafe protects your creative work by securing your intellectual property rights and ensuring that no one can reproduce, modify, or profit from your art without your explicit permission.
+                    </p>
+                </div>
+
+                <!-- Navigation Links Columns (3x) -->
+                <div class="grid grid-cols-3 gap-12 col-span-1 md:col-span-3">
+                    
+                    <!-- Column 1: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-4">Services</h3>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="#" class="hover:accent-color transition duration-200">Portfolio</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Monitor</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Extension</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Watermark</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Explore -->
+                    <div>
+                        <h3 class="text-base font-bold mb-4">Explore</h3>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="#" class="hover:accent-color transition duration-200">Categories</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Find an Artist</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Report</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: About -->
+                    <div>
+                        <h3 class="text-base font-bold mb-4">About</h3>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="#" class="hover:accent-color transition duration-200">About ArtSafe</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Blogs</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">FAQs</a></li>
+                            <li><a href="#" class="hover:accent-color transition duration-200">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Copyright / Credits -->
+            <div class="text-center mt-6 text-xs text-gray-500">
+                &copy; ArtiSafe 2025 | Developed by Kuma Technologies
+            </div>
+        </div>
+    </footer>
+
+    <!-- No specific JavaScript functionality was requested, so the script tag is omitted for maximum efficiency. -->
+
+</body>
+</html>
+</body>
+</body>
+</html>
+</html>
