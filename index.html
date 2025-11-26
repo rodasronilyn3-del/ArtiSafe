@@ -12,8 +12,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo-section">
-                <img src="logoo (2).png" alt="ArtSafe Logo" class="logo">
-                <img src="transparent.png" alt="ArtSafe Logo" class="logo">
+                <a href="index.html">  <img src="logoo (2).png" alt="ArtSafe Logo" class="logo"> </a>
             </div>
             
             <ul class="nav-menu">
@@ -32,7 +31,7 @@
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">Art Categories</a>
                         <a href="#" class="dropdown-item">Find an Artist</a>
-                        <a href="#" class="dropdown-item">Report</a>
+                        <a href="report.html" class="dropdown-item">Report</a>
                     </div>
                 </li>
                 
@@ -45,7 +44,10 @@
                 </li>
             </ul>
             
-            <button class="login-btn">Login</button>
+            
+<a href="signup.html"><button class="login-btn">Login</button></a>
+</div>
+</nav>
         </div>
     </nav>
 
@@ -54,8 +56,11 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Protect your creativity.<br><span class="highlight">Secure your rights.</span></h1>
-                <p>ArtiSafe protects your creative work by securing your intellectual property rights and <br> ensuring that no one can reproduce, display, profit from your art without your explicit permission.</p>
-                <button class="cta-btn">Start Protecting Your Artwork</button>
+                <p> <b> ArtiSafe </b> protects your creative work by securing your intellectual property rights and <br> ensuring that no one can reproduce, display, profit from your art without your explicit permission.</p>
+               <p> 
+                Using advanced <b> file-identity tagging, intelligent web tracking, and a smart authenticity-verification system, </b> ArtiSafe safeguards originality and detects misuse across social media and beyond. </p>
+                <a href="signup.html">
+<button class="cta-btn">Start Protecting Your Artwork</button> </a>
             </div>
 
             <div class="hero-carousel">
@@ -269,11 +274,10 @@
   <div class="container">
     <!-- Header Section -->
     <div class="header-section">
-      <h1> <b> Is Your Next Masterpiece Already Someone Else's Profit? </b> </h1>
+      <h1><b>Is Your Next Masterpiece Already Someone Else's Profit?</b></h1>
       
       <div class="quote-box">
-        <h2> "A survey found that 58% of artists had experienced their artwork being stolen on Instagram. The ease of copying and reposting content online without credit or permission is rampant."</h3>
-      </h2> </div>
+        <h2><b> "A survey found that 58% of artists had experienced their artwork being stolen on Instagram. The ease of copying and reposting content online without credit or permission is rampant." </h2></b></div>
     </div>
 
     <!-- Problems Cards -->
@@ -339,26 +343,31 @@
     });
 
     // Add intersection observer for card animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
+    document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.card, .solution-card').forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(card);
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        obs.unobserve(entry.target); // prevents repeating
+      }
     });
+  }, observerOptions);
+
+  document.querySelectorAll('.card, .solution-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(card);
+  });
+});
+    
+    
   </script>
 </body>
 <body>
@@ -833,4 +842,3 @@
 </body>
 </html>
 </html>
-
