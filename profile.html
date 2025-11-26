@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" type="image/x-icon" href="logoo (2).png">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html">  <img src="logoo (2).png" alt="ArtSafe Logo" class="logo"> </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Monitor</a>
+                        <a href="#" class="dropdown-item">Extension</a>
+                        <a href="#" class="dropdown-item">Watermark</a>
+                        <a href="#" class="dropdown-item">Consult</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Art Categories</a>
+                        <a href="#" class="dropdown-item">Find an Artist</a>
+                        <a href="report.html" class="dropdown-item">Report</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Profile <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Blogs</a>
+                        <a href="#" class="dropdown-item">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+            
+            <!-- Added right section with user greeting and logout button -->
+            <div class="nav-right">
+                <span class="user-greeting">Hi, JDC1010 <span class="user-icon">😃</span></span>
+                <a href="index.html"><button class="logout-btn">Logout</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <link rel="stylesheet" href="dashboard-styles.css">
+    </head>
+    <body>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="mobile-link">Services</a>
+        <a href="#" class="mobile-link">Explore</a>
+        <a href="#" class="mobile-link active">Profile</a>
+    </div>
+
+    
+    <main class="dashboard-container">
+        <div class="profile-card">
+           
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="hanni.jpg" alt="Juanita Dela Cruz">
+                </div>
+
+                <div class="profile-info">
+                    <div class="profile-name">
+                        <h1>Juanita Dela Cruz</h1>
+                        <span class="verification-badge">✓</span>
+                    </div>
+                    <p class="username">JDC1010</p>
+                    <p class="bio">I am passionate creating arts.</p>
+
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">30</span>
+                            <span class="stat-label">artworks</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10</span>
+                            <span class="stat-label">followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30</span>
+                            <span class="stat-label">following</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="profile-actions">
+                <button class="btn btn-primary">💬 Messages</button>
+                <button class="btn btn-primary">⚙️ Settings</button>
+            </div>
+
+            
+            <div class="profile-divider"></div>
+            
+            <div class="gallery-section">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="pic1.jpg" alt="Artwork 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="pic2.jpg" alt="Artwork 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="pic3.jpg" alt="Artwork 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <styles>
+        
+    </styles>
+
+    <script src="dashboard-script.js"></script>
+</body>
+</html>
