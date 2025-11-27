@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" type="image/x-icon" href="logoo (2).png">
+    <title>ArtiSafe - DMCA Consult and Takedown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html">  <img src="logoo (2).png" alt="ArtSafe Logo" class="logo"> </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Monitor</a>
+                        <a href="#" class="dropdown-item">Extension</a>
+                        <a href="#" class="dropdown-item">Watermark</a>
+                        <a href="#" class="dropdown-item">Consult</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Art Categories</a>
+                        <a href="#" class="dropdown-item">Find an Artist</a>
+                        <a href="report.html" class="dropdown-item">Report</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Blogs</a>
+                        <a href="#" class="dropdown-item">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+            
+            
+<a href="signup.html"><button class="login-btn">Logout</button></a>
+</div>
+</nav>
+        </div>
+    </nav>
+
+    <style>
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0088C3 0%, #00D9C4 100%);
+            padding: 3rem 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .step {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Consultation Form - Right Side */
+        .consultation-form-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .consultation-form-box h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #0052A3;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0088C3;
+            box-shadow: 0 0 0 3px rgba(0, 136, 195, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #0052A3;
+            color: white;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #003d7a;
+        }
+
+        /* Main Consultation Form Section */
+        .main-form-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .form-header {
+            background: #0052A3;
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .form-body {
+            padding: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-row.full {
+            grid-template-columns: 1fr;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0088C3;
+            box-shadow: 0 0 0 3px rgba(0, 136, 195, 0.1);
+        }
+
+        .file-upload {
+            border: 2px dashed #ddd;
+            border-radius: 4px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .file-upload:hover {
+            border-color: #0088C3;
+            background-color: rgba(0, 136, 195, 0.05);
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin: 1.5rem 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .checkbox-group label {
+            cursor: pointer;
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .checkbox-group a {
+            color: #0088C3;
+            text-decoration: none;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .form-actions button {
+            flex: 1;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn-large {
+            background: #0052A3;
+            color: white;
+        }
+
+        .submit-btn-large:hover {
+            background: #003d7a;
+        }
+
+        /* Footer */
+        footer {
+            background: #f5f5f5;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #0052A3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Need Legal Expertise? Connect with DMCA Specialists</h1>
+                <p>Our network of legal professionals can guide you through copyright infringement claims and DMCA takedown requests.</p>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon">📝</div>
+                        <h3>Describe Your Case</h3>
+                        <p>Tell us about your suspected infringement.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">🔗</div>
+                        <h3>Connect with Expert</h3>
+                        <p>Get matched with a relevant attorney.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">✓</div>
+                        <h3>Take Action</h3>
+                        <p>File your DMCA with confidence.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="consultation-form-box">
+                <h2>Request a Free Consultation</h2>
+                <form id="quickForm" onsubmit="handleQuickSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="infringementType">Type of Infringement</label>
+                        <select id="infringementType" name="infringementType" required>
+                            <option value="">Select type</option>
+                            <option value="painting">Painting</option>
+                            <option value="photo">Photo</option>
+                            <option value="abstract">Abstract Expressionism</option>
+                            <option value="visualart">Visual Art</option>
+                            <option value="digitalart">Digital Art</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Consultation Form -->
+    <section class="main-form-section">
+        <div class="form-container">
+            <div class="form-header">Request a Free Consultation</div>
+            <div class="form-body">
+                <form id="mainForm" onsubmit="handleMainSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Your Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="artworkType">Type of Artwork (e.g., Painting, Photo, Music)</label>
+                            <select id="artworkType" name="artworkType" required>
+                                <option value="">Select artwork type</option>
+                                <option value="painting">Painting</option>
+                            <option value="photo">Photo</option>
+                            <option value="abstract">Abstract Expressionism</option>
+                            <option value="visualart">Visual Art</option>
+                            <option value="digitalart">Digital Art</option>
+                            <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="form-group full">
+                            <label for="description">Describe DMCA Incident (Include links if possible)</label>
+                            <textarea id="description" name="description" placeholder="Describe the infringement incident in detail..." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="form-group full">
+                            <label>Attach Evidence (Optional)</label>
+                            <div class="file-upload" onclick="document.getElementById('fileInput').click()">
+                                <input type="file" id="fileInput" name="evidence" accept="image/*,.pdf">
+                                <p>📁 Click to upload screenshots or documents</p>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">or drag and drop</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#terms">Terms of Service</a> & <a href="#privacy">Privacy Policy</a></label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn-large">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#terms">Terms the Service</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#contact">Contact Support</a>
+        </div>
+        <p class="footer-text">&copy; 2025 ArtiSafe Legal Consultation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle quick consultation form submission
+        function handleQuickSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const type = document.getElementById('infringementType').value;
+            
+            alert(`Thank you, ${name}! We've received your consultation request. We'll contact you at ${email} shortly.`);
+            document.getElementById('quickForm').reset();
+        }
+
+        // Handle main consultation form submission
+        function handleMainSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('fullName').value;
+            const terms = document.getElementById('terms').checked;
+            
+            if (!terms) {
+                alert('Please agree to the Terms of Service and Privacy Policy.');
+                return;
+            }
+            
+            alert(`Thank you, ${name}! Your detailed consultation request has been submitted. Our legal team will review your case and contact you within 24 hours.`);
+            document.getElementById('mainForm').reset();
+        }
+
+        // Drag and drop file upload
+        const fileUpload = document.querySelector('.file-upload');
+        const fileInput = document.getElementById('fileInput');
+
+        fileUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUpload.style.borderColor = '#0088C3';
+            fileUpload.style.backgroundColor = 'rgba(0, 136, 195, 0.1)';
+        });
+
+        fileUpload.addEventListener('dragleave', () => {
+            fileUpload.style.borderColor = '#ddd';
+            fileUpload.style.backgroundColor = 'transparent';
+        });
+
+        fileUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUpload.style.borderColor = '#ddd';
+            fileUpload.style.backgroundColor = 'transparent';
+            fileInput.files = e.dataTransfer.files;
+            updateFileName();
+        });
+
+        fileInput.addEventListener('change', updateFileName);
+
+        function updateFileName() {
+            if (fileInput.files.length > 0) {
+                const fileName = fileInput.files[0].name;
+                const uploadText = fileUpload.querySelector('p');
+                uploadText.textContent = `✓ ${fileName} selected`;
+            }
+        }
+    </script>
+</body>
+</html>
